@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Montserrat, Poppins } from "next/font/google";
+import StyledComponentsRegistry from "@/utils/styled-components/registry";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -10,11 +11,13 @@ const montserrat = Montserrat({
 
 const poppins = Poppins({
   variable: "--font-poppins",
+  subsets: ["latin"],
   weight: ["700"],
 });
 
 const dmsans = DM_Sans({
   variable: "--font-dmsans",
+  subsets: ["latin"],
   weight: ["400", "600"],
 });
 
@@ -33,7 +36,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${poppins.variable} ${dmsans.variable}`}
       >
-        {children}
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>{" "}
       </body>
     </html>
   );
