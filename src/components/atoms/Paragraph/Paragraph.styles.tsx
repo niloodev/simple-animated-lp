@@ -14,7 +14,8 @@ export const ParagraphContainer = styled(motion.p).withConfig({
   line-height: ${(props) =>
     props.lineHeight ? `${props.lineHeight?.default}` : "2rem"};
   color: ${(props) => (props.color ? `${props.color}` : "#FFF")};
-  font-weight: ${(props) => (props.fontWeight ? `${props.fontWeight}` : "400")};
+  font-weight: ${(props) =>
+    props.fontWeight ? `${props.fontWeight?.default}` : "400"};
 
   ${device.tablet} {
     ${(props) =>
@@ -27,6 +28,12 @@ export const ParagraphContainer = styled(motion.p).withConfig({
       props.lineHeight?.tablet
         ? css`
             line-height: ${props.lineHeight?.tablet};
+          `
+        : ""}
+    ${(props) =>
+      props.fontWeight?.tablet
+        ? css`
+            font-weight: ${props.fontWeight?.tablet};
           `
         : ""}
   }
@@ -42,6 +49,12 @@ export const ParagraphContainer = styled(motion.p).withConfig({
       props.lineHeight?.desktop
         ? css`
             line-height: ${props.lineHeight?.desktop};
+          `
+        : ""}
+    ${(props) =>
+      props.fontWeight?.desktop
+        ? css`
+            font-weight: ${props.fontWeight?.desktop};
           `
         : ""}
   }

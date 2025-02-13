@@ -1,5 +1,6 @@
-import { Button, Heading, Icon, Logo, Paragraph } from "@/components/atoms";
-import { Accordion } from "@/components/molecules";
+import { Button, Heading, Logo, Paragraph } from "@/components/atoms";
+import { Accordion, Article } from "@/components/molecules";
+import { Mockup } from "@/components/organisms/Mockup/Mockup";
 import { Flex, Wrapper } from "@/components/templates";
 
 export default function Home() {
@@ -9,7 +10,6 @@ export default function Home() {
         Lorem ipsum dolor sit amet: consectetur adipiscing elit' nullam
         convallis nunc lectus posuere et vestibulum integer pharetra.
       </Heading>
-      <Icon backgroundColor="#9A7FDD" icon="DoubleArrowIcon" />
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
         real-time nunc, sed egestas dictum massa id, feugiat euismod.
@@ -18,15 +18,19 @@ export default function Home() {
         teste
       </Paragraph>
       <Flex as="article" flex={{ default: "row wrap" }}>
-        <Button buttonStyle="ButtonC">Learn More</Button>
+        <Button buttonStyle="ButtonA">Learn More</Button>
         <Logo />
       </Flex>
 
       <Accordion
-        toggle
         title="Lorem ipsum"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus real-time nunc, sed egestas dictum massa id, feugiat euismod."
       />
+      <Article
+        title="Lorem ipsum"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus real-time nunc, sed egestas dictum massa id, feugiat euismod."
+      />
+      <Mockup />
     </Wrapper>
   );
 }

@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 export const LogoContainer = styled(motion.div)`
   position: relative;
+  container-type: size;
   width: 6.3rem;
   height: 5.9rem;
   background-color: #fff;
@@ -28,9 +29,4 @@ export const LogoSvgContainer = styled(motion.svg)`
   width: 100%;
   aspect-ratio: 93 / 83;
   height: auto;
-  min-width: 4.3rem;
-
-  ${device.desktop} {
-    min-width: 9.1rem;
-  }
 `;
