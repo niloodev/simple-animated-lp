@@ -1,36 +1,40 @@
-import { Button, Heading, Logo, Paragraph } from "@/components/atoms";
-import { Accordion, Article } from "@/components/molecules";
-import { Mockup } from "@/components/organisms/Mockup/Mockup";
-import { Flex, Wrapper } from "@/components/templates";
+import { Button, Heading } from "@/components/atoms";
+import { RevealSection, Mockup } from "@/components/organisms";
+import { Flex, Sticky, Wrapper } from "@/components/templates";
 
 export default function Home() {
   return (
     <Wrapper as="main">
-      <Heading as="h2">
-        Lorem ipsum dolor sit amet: consectetur adipiscing elit' nullam
-        convallis nunc lectus posuere et vestibulum integer pharetra.
-      </Heading>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-        real-time nunc, sed egestas dictum massa id, feugiat euismod.
-      </Paragraph>
-      <Paragraph fontSize={{ default: "1.5rem", desktop: "2rem" }}>
-        teste
-      </Paragraph>
-      <Flex as="article" flex={{ default: "row wrap" }}>
-        <Button buttonStyle="ButtonA">Learn More</Button>
-        <Logo />
+      <Flex
+        as="div"
+        flex={{ default: "column" }}
+        gap={{ default: "6.4rem", desktop: "8.8rem" }}
+        align={{ default: "stretch" }}
+      >
+        <Heading as="h1">
+          Lorem ipsum dolor sit amet: consectetur adipiscing elit' nullam
+          convallis nunc lectus posuere et vestibulum integer pharetra.
+        </Heading>
+        <Flex
+          as="section"
+          flex={{ default: "column-reverse", desktop: "row" }}
+          gap={{ default: "6.3rem" }}
+          justify={{ default: "flex-start", desktop: "space-between" }}
+          align={{ default: "center", desktop: "stretch" }}
+        >
+          <RevealSection />
+          <Sticky>
+            <Mockup />
+          </Sticky>
+        </Flex>
+        <Button
+          as="a"
+          $buttonStyle="ButtonA"
+          href="https://cheesecakelabs.com/br/"
+        >
+          LEARN MORE
+        </Button>
       </Flex>
-
-      <Accordion
-        title="Lorem ipsum"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus real-time nunc, sed egestas dictum massa id, feugiat euismod."
-      />
-      <Article
-        title="Lorem ipsum"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus real-time nunc, sed egestas dictum massa id, feugiat euismod."
-      />
-      <Mockup />
     </Wrapper>
   );
 }

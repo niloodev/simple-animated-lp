@@ -34,6 +34,7 @@ export const AccordionParagraph = styled(Paragraph).attrs({
 export const AccordionHeading = styled(Heading).attrs({
   forwardedAs: "h2",
 })<{ $accordionToggle?: boolean }>`
+  text-align: left;
   ${(props) =>
     props.$accordionToggle &&
     css`

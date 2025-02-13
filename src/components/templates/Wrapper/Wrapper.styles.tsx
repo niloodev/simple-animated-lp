@@ -16,7 +16,6 @@ const CustomWrapperElement = forwardRef<HTMLDivElement, WrapperProps>(
 export const WrapperContainer = styled(CustomWrapperElement)`
   position: relative;
   max-width: 119.5rem;
-  height: 178.7rem;
   width: 80%;
   margin: 11.4rem auto 14.1rem auto;
 

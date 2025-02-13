@@ -8,11 +8,13 @@ export const MockupContainer = styled(motion.div)`
   container-type: size;
 
   position: relative;
-  width: 21.5rem;
+  height: 46.5rem;
   aspect-ratio: 455 / 980;
 
   ${device.desktop} {
-    width: 45.3rem;
+    height: 98rem;
+    max-height: 95vh;
+    margin-right: 7.9rem;
   }
 `;
 

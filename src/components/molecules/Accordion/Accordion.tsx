@@ -23,17 +23,12 @@ export const Accordion = forwardRef<HTMLDivElement, AccordionProps>(
             {title}
           </AccordionHeading>
         </AccordionButton>
-        <AnimatePresence>
-          {open && (
-            <AccordionParagraph
-              initial={{ y: -25, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -25, opacity: 0 }}
-            >
-              {description}
-            </AccordionParagraph>
-          )}
-        </AnimatePresence>
+        <AccordionParagraph
+          initial={{ y: -25, opacity: 0 }}
+          animate={open ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
+        >
+          {description}
+        </AccordionParagraph>
       </AccordionContainer>
     );
   }
