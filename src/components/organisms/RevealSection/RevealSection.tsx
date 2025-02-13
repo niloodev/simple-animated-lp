@@ -1,3 +1,4 @@
+import { Button } from "@/components/atoms";
 import { Accordion, Article } from "@/components/molecules";
 import { Flex } from "@/components/templates";
 import { HTMLMotionProps } from "motion/react";
@@ -25,6 +26,13 @@ export const RevealSection = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
           title="Lorem ipsum dolor sit"
           description="Nulla lorem tincidunt. Pulvinar et sapien sit amet blandit odio lectus euismod quam ut justo. Integer ornare."
         />
+        <Button
+          as="a"
+          $buttonStyle="ButtonA"
+          href="https://cheesecakelabs.com/br/"
+        >
+          LEARN MORE
+        </Button>
       </Flex>
     );
   }

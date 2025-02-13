@@ -27,13 +27,6 @@ export default function Home() {
             <Mockup />
           </Sticky>
         </Flex>
-        <Button
-          as="a"
-          $buttonStyle="ButtonA"
-          href="https://cheesecakelabs.com/br/"
-        >
-          LEARN MORE
-        </Button>
       </Flex>
     </Wrapper>
   );

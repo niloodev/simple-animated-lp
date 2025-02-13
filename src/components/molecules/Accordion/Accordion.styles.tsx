@@ -1,5 +1,6 @@
 import { Heading, Paragraph } from "@/components/atoms";
 import { Flex, FlexProps } from "@/components/templates";
+import { device } from "@/utils/breakpoints";
 import styled, { css } from "styled-components";
 
 export const AccordionButton = styled.button`
@@ -35,6 +36,12 @@ export const AccordionHeading = styled(Heading).attrs({
   forwardedAs: "h2",
 })<{ $accordionToggle?: boolean }>`
   text-align: left;
+  max-width: 22.7rem;
+
+  ${device.tablet} {
+    max-width: unset;
+  }
+
   ${(props) =>
     props.$accordionToggle &&
     css`
