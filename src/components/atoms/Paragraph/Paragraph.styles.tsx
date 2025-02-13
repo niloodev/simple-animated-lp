@@ -1,9 +1,12 @@
 import { motion } from "motion/react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ParagraphProps } from "./Paragraph.types";
 import { device } from "@/utils/breakpoints";
 
-export const ParagraphContainer = styled(motion.p)<ParagraphProps>`
+export const ParagraphContainer = styled(motion.p).withConfig({
+  shouldForwardProp: (prop) =>
+    !["font", "fontSize", "lineHeight", "color", "fontWeight"].includes(prop),
+})<ParagraphProps>`
   font-family: ${(props) =>
     props.font ? `var(--font-${props.font})` : "var(--font-dmsans)"};
   font-size: ${(props) =>
@@ -14,16 +17,32 @@ export const ParagraphContainer = styled(motion.p)<ParagraphProps>`
   font-weight: ${(props) => (props.fontWeight ? `${props.fontWeight}` : "400")};
 
   ${device.tablet} {
-    font-size: ${(props) =>
-      props.fontSize ? `${props.fontSize?.tablet}` : "1.8rem"};
-    line-height: ${(props) =>
-      props.lineHeight ? `${props.lineHeight?.tablet}` : "2.2rem"};
+    ${(props) =>
+      props.fontSize?.tablet
+        ? css`
+            font-size: ${props.fontSize?.tablet};
+          `
+        : ""}
+    ${(props) =>
+      props.lineHeight?.tablet
+        ? css`
+            line-height: ${props.lineHeight?.tablet};
+          `
+        : ""}
   }
 
   ${device.desktop} {
-    font-size: ${(props) =>
-      props.fontSize ? `${props.fontSize?.desktop}` : "3.2rem"};
-    line-height: ${(props) =>
-      props.lineHeight ? `${props.lineHeight?.desktop}` : "4.1rem"};
+    ${(props) =>
+      props.fontSize?.desktop
+        ? css`
+            font-size: ${props.fontSize?.desktop};
+          `
+        : ""}
+    ${(props) =>
+      props.lineHeight?.desktop
+        ? css`
+            line-height: ${props.lineHeight?.desktop};
+          `
+        : ""}
   }
 `;

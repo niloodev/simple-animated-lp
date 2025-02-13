@@ -1,6 +1,6 @@
 export interface Breakpoints {
-  tablet: string;
-  desktop: string;
+  tablet?: string;
+  desktop?: string;
 }
 
 export const breakpoints: Breakpoints = {
