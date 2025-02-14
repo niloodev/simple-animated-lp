@@ -32,7 +32,7 @@ This application uses the following open-source packages:
 ##### Core ones.
 - [Next](https://nextjs.org/) (Framework)
 - [TypeScript](https://www.typescriptlang.org/) (Strongly typed programming language that builds on JavaScript)
-- [Motion or Framer Motion]([https://www.typescriptlang.org/](https://motion.dev/)) (Animation library)
+- [Motion or Framer Motion](https://motion.dev/) (Animation library)
 
 ##### Stylization.
 - [Styled Components](https://styled-components.com/) (CSS in JS / TS styling)
