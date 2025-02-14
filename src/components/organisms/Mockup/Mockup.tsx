@@ -28,6 +28,9 @@ export const Mockup = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
       document.addEventListener("mouseleave", (e) => onMouseLeaveHandler());
     }, []);
 
+    /* istanbul ignore next */
+    const setViewportEnter = () => setOnView(true);
+
     return (
       <MockupContainer
         {...props}
@@ -47,8 +50,9 @@ export const Mockup = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
         }}
         initial="hidden"
         whileInView="visible"
-        onViewportEnter={() => setOnView(true)}
+        onViewportEnter={setViewportEnter}
         viewport={{ once: true, amount: 0.5 }}
+        data-testid="mockup-container"
       >
         <MockThreeStyled
           style={{

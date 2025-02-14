@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { breakpoints } from "@/utils/breakpoints";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { useEffect, useRef, useState } from "react";

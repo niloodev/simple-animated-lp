@@ -6,7 +6,7 @@ import { LogoContainer, LogoSvgContainer, LogoWrapper } from "./Logo.styles";
 export const Logo = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
   (props, ref) => {
     return (
-      <LogoContainer {...props} ref={ref}>
+      <LogoContainer {...props} ref={ref} data-testid="logo">
         <LogoWrapper
           transition={{ duration: 1.25, delay: 1.7 }}
           initial={{ width: "0%" }}
@@ -18,6 +18,7 @@ export const Logo = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
             viewBox="0 0 95 85"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            aria-label="Logo App"
           >
             <motion.path
               pathLength={0.5}

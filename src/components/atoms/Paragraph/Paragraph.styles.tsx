@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { motion } from "motion/react";
 import styled, { css } from "styled-components";
 import { ParagraphProps } from "./Paragraph.types";

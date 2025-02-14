@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import styled, { css } from "styled-components";
 import { FlexProps } from "./Flex.types";
 import { device } from "@/utils/breakpoints";

@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import styled from "styled-components";
 import { forwardRef } from "react";
 import { WrapperProps } from "./Wrapper.types";
