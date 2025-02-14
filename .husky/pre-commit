@@ -1,4 +1,1 @@
-npm run format
-npm run check-format
-npm run lint
-npm run coverage
+npm run test
