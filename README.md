@@ -1,4 +1,3 @@
-
 <h1 align="center">
   <br>
      <img src="./app-logo.svg" alt="CodeLeap" width="35%">
@@ -12,11 +11,13 @@
 <p align="center">
   <a href="https://simple-animated-lp.vercel.app/" target="_blank">Realtime</a> •
   <a href="#proposal">Proposal</a> •
+  <a href="#setup">Setup</a> •
   <a href="#tools">Tools</a> •
   <a href="#author">Author</a>
 </p>
 
 ## Proposal
+
 - The application must include an animated mockup with animated icons, scroll-reactive animations, and shooting stars.
 - It must have unit tests using Jest and Testing Library.
 - Performance should remain smooth, even with running animations, with no FPS drops.
@@ -25,31 +26,42 @@
 - I followed the Atomic Design methodology to structure the project.
 - Mobile-first methodology for responsivity.
 
+## Setup
+
+- Simply follow the process of a common Next.js project.
+- Node version 18 or above.
+- Run (`npm install`, `yarn install`) to install the packages.
+- Use (`npm run dev`, `yarn dev`) to start in development mode.
+- If you want, you can run (`npm run build` with `npm run start`) to start in production mode.
+
 ## Tools
 
 This application uses the following open-source packages:
 
 ##### Core ones.
+
 - [Next](https://nextjs.org/) (Framework)
 - [TypeScript](https://www.typescriptlang.org/) (Strongly typed programming language that builds on JavaScript)
 - [Motion or Framer Motion](https://motion.dev/) (Animation library)
 
 ##### Stylization.
+
 - [Styled Components](https://styled-components.com/) (CSS in JS / TS styling)
 
 ##### Testing
+
 - [Jest](https://jestjs.io/) (Javascript testing framework)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) (The name speaks for itself)
 
 ##### Code formatter, and other environment development tools.
+
 - [ESLint](https://highlightjs.org/) (Javascript [linter](https://sourcelevel.io/blog/what-is-a-linter-and-why-your-team-should-use-it))
 - [Prettier](https://prettier.io/) (Opinionated code formatter)
 - [Figma Scheme](https://www.figma.com/design/Q7BQNcOvq2joGcxjJ8P61u/Technical-Assessment-%E2%80%93-Marketing-Contractor?node-id=35-10&t=yHbLyTdWC39CyVKM-0) (Application prototype)
 - [Husky](https://www.npmjs.com/package/husky) (Commit automation, runs unit tests before commiting)
 
 ## Author
+
 **made by niloodev | Ezequiel Nilo**
 
 **ANY TIPS OR FEEDBACK IS HIGHLY APPRECIATED! 🐸**
-
-

@@ -9,7 +9,7 @@ export const StarContainer = (
     <StarStaticBackground {...props}>
       <Star
         animate={{
-          x: ["-30vw", "130vw"],
+          x: ["-30vw", "160vw"],
           scale: [1, 3],
         }}
         transition={{ repeat: Infinity, duration: 5 }}
@@ -17,7 +17,7 @@ export const StarContainer = (
       <Star
         $bottomStar
         animate={{
-          x: ["-30vw", "130vw"],
+          x: ["-30vw", "160vw"],
           scale: [1, 3],
         }}
         transition={{ repeat: Infinity, duration: 5, delay: 2 }}
