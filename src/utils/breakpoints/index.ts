@@ -1,16 +1,16 @@
 export interface Breakpoints {
-  tablet?: string;
-  desktop?: string;
+  tablet?: string | number;
+  desktop?: string | number;
 }
 
 export const breakpoints: Breakpoints = {
-  tablet: `(min-width: 600px)`,
-  desktop: `(min-width: 1200px)`,
+  tablet: 600,
+  desktop: 1200,
 };
 
 export const device: Breakpoints = {
-  tablet: `@media ${breakpoints.tablet}`,
-  desktop: `@media ${breakpoints.desktop}`,
+  tablet: `@media (min-width: ${breakpoints.tablet}px)`,
+  desktop: `@media (min-width: ${breakpoints.desktop}px)`,
 };
 
 export * from "./hooks";

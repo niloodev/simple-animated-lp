@@ -11,7 +11,10 @@ export default function Home() {
         gap={{ default: "6.4rem", desktop: "8.8rem" }}
         align={{ default: "stretch" }}
       >
-        <Heading as="h1">
+        <Heading
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+        >
           Lorem ipsum dolor sit amet: consectetur adipiscing elit' nullam
           convallis nunc lectus posuere et vestibulum integer pharetra.
         </Heading>
@@ -22,7 +25,35 @@ export default function Home() {
           justify={{ default: "flex-start", desktop: "space-between" }}
           align={{ default: "center", desktop: "stretch" }}
         >
-          <RevealSection />
+          <RevealSection
+            elements={[
+              {
+                title: "Lorem ipsum",
+                description:
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus real-time nunc, sed egestas dictum massa id, feugiat euismod.",
+              },
+              {
+                title: "Lorem ipsum dolor sit",
+                description:
+                  "Nulla lorem tincidunt. Pulvinar et sapien sit amet blandit odio lectus euismod quam ut justo. Integer ornare.",
+              },
+              {
+                title: "Lorem ipsum dolor sit",
+                description:
+                  "Nulla lorem tincidunt. Pulvinar et sapien sit amet blandit odio lectus euismod quam ut justo. Integer ornare.",
+                isAccordion: true,
+              },
+            ]}
+            footerElement={
+              <Button
+                as="a"
+                $buttonStyle="ButtonA"
+                href="https://cheesecakelabs.com/br/"
+              >
+                LEARN MORE
+              </Button>
+            }
+          />
           <Sticky>
             <Mockup />
           </Sticky>

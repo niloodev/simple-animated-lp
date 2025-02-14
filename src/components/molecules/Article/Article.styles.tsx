@@ -4,7 +4,6 @@ import { device } from "@/utils/breakpoints";
 import styled from "styled-components";
 
 export const ArticleContainer = styled(Flex).attrs({
-  forwardedAs: "article",
   flex: { default: "column" },
   gap: { default: "1.2rem", desktop: "2.4rem" },
   align: { default: "flex-start" },

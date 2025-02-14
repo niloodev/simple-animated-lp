@@ -7,7 +7,6 @@ import {
   AccordionParagraph,
 } from "./Accordion.styles";
 import { forwardRef, useState } from "react";
-import { AnimatePresence } from "motion/react";
 
 export const Accordion = forwardRef<HTMLDivElement, AccordionProps>(
   ({ title, description, ...props }, ref) => {

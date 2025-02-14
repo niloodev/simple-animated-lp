@@ -8,9 +8,9 @@ export const Logo = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
     return (
       <LogoContainer {...props} ref={ref}>
         <LogoWrapper
-          transition={{ duration: 1.25 }}
+          transition={{ duration: 1.25, delay: 1.7 }}
           initial={{ width: "0%" }}
-          animate={{ width: "100%" }}
+          whileInView={{ width: "100%" }}
         >
           <LogoSvgContainer
             width="100%"
@@ -37,7 +37,7 @@ export const Logo = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
               clipRule="evenodd"
               d="M21.0803 30.2252C16.0735 30.2252 12.0107 26.1624 12.0107 21.1556C12.0107 16.1488 16.0735 12.0859 21.0803 12.0859C26.0872 12.0859 30.15 16.1488 30.15 21.1556C30.15 26.1624 26.0872 30.2252 21.0803 30.2252Z"
               fill="#AC80E0"
-              transition={{ delay: 0.9 }}
+              transition={{ delay: 2.4 }}
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
             />
@@ -46,7 +46,7 @@ export const Logo = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
               clipRule="evenodd"
               d="M74.0046 30.2252C68.9978 30.2252 64.9349 26.1624 64.9349 21.1556C64.9349 16.1488 68.9978 12.0859 74.0046 12.0859C79.0114 12.0859 83.0742 16.1488 83.0742 21.1556C83.0742 26.1624 79.0114 30.2252 74.0046 30.2252Z"
               fill="#AC80E0"
-              transition={{ delay: 0.9 }}
+              transition={{ delay: 2.4 }}
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
             />

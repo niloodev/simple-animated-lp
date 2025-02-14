@@ -5,7 +5,7 @@ import { ComponentProps, forwardRef } from "react";
 export const MockTwo = forwardRef<
   SVGSVGElement,
   ComponentProps<typeof motion.svg>
->((props, ref) => {
+>(({ animate, ...props }, ref) => {
   return (
     <motion.svg
       width="379"
@@ -40,50 +40,81 @@ export const MockTwo = forwardRef<
         d="M58.3169 134.959C58.3169 144.423 50.6453 152.095 41.1813 152.095C31.7173 152.095 24.0458 144.423 24.0458 134.959C24.0458 125.495 31.7173 117.823 41.1813 117.823C50.6453 117.823 58.3169 125.495 58.3169 134.959Z"
         fill="#9A7FDD"
       />
-      <path
-        d="M58.3169 60.8842C58.3169 70.3482 50.6453 78.0197 41.1813 78.0197C31.7173 78.0197 24.0458 70.3482 24.0458 60.8842C24.0458 51.4202 31.7173 43.7487 41.1813 43.7487C50.6453 43.7487 58.3169 51.4202 58.3169 60.8842Z"
-        fill="#51CE92"
-      />
-      <path
-        d="M309.942 130.193C326.544 123.316 334.429 104.282 327.552 87.679C320.675 71.0764 301.641 63.1923 285.038 70.0693C268.435 76.9463 260.551 95.9802 267.428 112.583C274.305 129.185 293.339 137.07 309.942 130.193Z"
-        fill="#9A7FDD"
-      />
-      <path
-        d="M278.964 97.6289L286.982 88.8461L295 97.6289"
-        stroke="white"
-        strokeWidth="0.74"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M286.981 88.8461V111.407"
-        stroke="white"
-        strokeWidth="0.74"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M316.007 102.624L307.989 111.407L299.97 102.624"
-        stroke="white"
-        strokeWidth="0.74"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M307.989 111.407V88.8461"
-        stroke="white"
-        strokeWidth="0.74"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M41.8626 125.483C37.6683 125.483 34.2627 128.889 34.2627 133.083C34.2627 139.583 41.8626 144.423 41.8626 144.423C41.8626 144.423 49.4624 139.583 49.4624 133.083C49.4624 128.889 46.0568 125.483 41.8626 125.483ZM41.8626 136.895C39.4607 136.895 37.513 134.947 37.513 132.545C37.513 130.143 39.4607 128.196 41.8626 128.196C44.2644 128.196 46.2122 130.143 46.2122 132.545C46.2122 134.947 44.2644 136.895 41.8626 136.895Z"
-        fill="white"
-      />
-      <path
-        d="M42.9618 70.9337L39.7833 62.103L30.9526 58.9244L47.5265 54.3597L42.9618 70.9337Z"
-        fill="white"
-      />
+      <motion.g
+        animate={animate ? { rotate: [360, 0] } : undefined}
+        transition={{
+          repeat: Infinity,
+          duration: 1.7,
+          ease: "linear",
+        }}
+      >
+        <path
+          d="M58.3169 60.8842C58.3169 70.3482 50.6453 78.0197 41.1813 78.0197C31.7173 78.0197 24.0458 70.3482 24.0458 60.8842C24.0458 51.4202 31.7173 43.7487 41.1813 43.7487C50.6453 43.7487 58.3169 51.4202 58.3169 60.8842Z"
+          fill="#51CE92"
+        />
+        <path
+          d="M42.9618 70.9337L39.7833 62.103L30.9526 58.9244L47.5265 54.3597L42.9618 70.9337Z"
+          fill="white"
+        />
+      </motion.g>
+      <motion.g
+        initial={{ rotate: 0 }}
+        animate={{ rotate: [359, 0] }}
+        transition={{
+          repeat: Infinity,
+          repeatDelay: 0.2,
+          duration: 3,
+          type: "spring",
+          bounce: 0.6,
+        }}
+      >
+        <path
+          d="M309.942 130.193C326.544 123.316 334.429 104.282 327.552 87.679C320.675 71.0764 301.641 63.1923 285.038 70.0693C268.435 76.9463 260.551 95.9802 267.428 112.583C274.305 129.185 293.339 137.07 309.942 130.193Z"
+          fill="#9A7FDD"
+        />
+        <path
+          d="M278.964 97.6289L286.982 88.8461L295 97.6289"
+          stroke="white"
+          strokeWidth="0.74"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M286.981 88.8461V111.407"
+          stroke="white"
+          strokeWidth="0.74"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M316.007 102.624L307.989 111.407L299.97 102.624"
+          stroke="white"
+          strokeWidth="0.74"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M307.989 111.407V88.8461"
+          stroke="white"
+          strokeWidth="0.74"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </motion.g>
+      {animate && (
+        <motion.path
+          d="M41.8626 125.483C37.6683 125.483 34.2627 128.889 34.2627 133.083C34.2627 139.583 41.8626 144.423 41.8626 144.423C41.8626 144.423 49.4624 139.583 49.4624 133.083C49.4624 128.889 46.0568 125.483 41.8626 125.483ZM41.8626 136.895C39.4607 136.895 37.513 134.947 37.513 132.545C37.513 130.143 39.4607 128.196 41.8626 128.196C44.2644 128.196 46.2122 130.143 46.2122 132.545C46.2122 134.947 44.2644 136.895 41.8626 136.895Z"
+          fill="white"
+          initial={{ scale: 0, y: 5 }}
+          animate={{
+            scale: 1,
+            y: [5, 5, 0, 0, -5, 0, -5, 0],
+          }}
+          transition={{
+            delay: 1.2,
+          }}
+        />
+      )}
     </motion.svg>
   );
 });

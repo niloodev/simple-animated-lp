@@ -1,13 +1,14 @@
 "use client";
-import { HTMLMotionProps, motion } from "motion/react";
+import { motion } from "motion/react";
 import { forwardRef } from "react";
 import { MockLogo, MockOneContainer } from "./MockOne.styles";
+import { MockOneProps } from "./MockOne.types";
 
-export const MockOne = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
-  (props, ref) => {
+export const MockOne = forwardRef<HTMLDivElement, MockOneProps>(
+  ({ renderLogo, ...props }, ref) => {
     return (
       <MockOneContainer {...props} ref={ref}>
-        <MockLogo />
+        {renderLogo && <MockLogo />}
         <motion.svg
           viewBox="0 0 455 980"
           fill="none"
@@ -46,7 +47,16 @@ export const MockOne = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
                 fill="white"
               />
             </mask>
-            <g mask="url(#mask1_44_294)">
+            <motion.g
+              mask="url(#mask1_44_294)"
+              animate={{ scale: [1, 1.5, 1], rotate: [0, 6, 0, -6, 0] }}
+              transition={{
+                ease: "linear",
+                repeat: Infinity,
+                duration: 30,
+                type: "keyframes",
+              }}
+            >
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -59,7 +69,7 @@ export const MockOne = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
                 d="M470.541 246.757C393.276 280.096 429.518 493.824 401.413 542.709C364.669 606.603 323.706 594.749 290.94 642.021C238.387 717.829 265.189 867.854 229.317 913.477C194.544 957.702 118.784 976.176 118.784 984.983H470.553V246.757H470.541Z"
                 fill="url(#paint2_linear_44_294)"
               />
-            </g>
+            </motion.g>
             <path
               fillRule="evenodd"
               clipRule="evenodd"

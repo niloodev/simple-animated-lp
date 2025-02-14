@@ -18,7 +18,6 @@ export const AccordionButton = styled.button`
 `;
 
 export const AccordionContainer = styled(Flex).attrs({
-  forwardedAs: "article",
   flex: { default: "column" },
   gap: { default: "1.2rem", desktop: "2.4rem" },
   align: { default: "flex-start" },

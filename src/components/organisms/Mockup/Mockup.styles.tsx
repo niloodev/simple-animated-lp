@@ -29,6 +29,8 @@ export const MockTwoStyled = styled(MockTwo)`
   right: -17.43cqw;
   width: 83.44cqw;
   height: auto;
+  pointer-events: none;
+  z-index: 10;
 `;
 
 export const MockThreeStyled = styled(MockThree)`
@@ -37,4 +39,6 @@ export const MockThreeStyled = styled(MockThree)`
   left: -16.55cqw;
   width: 83.44cqw;
   height: auto;
+  pointer-events: none;
+  z-index: 20;
 `;
