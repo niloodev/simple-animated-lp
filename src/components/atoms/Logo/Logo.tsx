@@ -10,7 +10,7 @@ export const Logo = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
         <LogoWrapper
           transition={{ duration: 1.25, delay: 1.7 }}
           initial={{ width: "0%" }}
-          whileInView={{ width: "100%" }}
+          animate={{ width: "100%" }}
         >
           <LogoSvgContainer
             width="100%"

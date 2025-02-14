@@ -36,7 +36,7 @@ export const Mockup = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
           visible: {
             transition: {
               when: "beforeChildren",
-              staggerChildren: 0.5,
+              staggerChildren: 0.3,
             },
           },
           hidden: {
