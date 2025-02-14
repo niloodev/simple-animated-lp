@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Simple Animated Landing Page",
     description:
-      "Animated Landing Page created for the Cheesecake Dev Challenge! Created in 13/02/2025.",
+      "Animated Landing Page created for the Cheesecake Dev Challenge! Created in 13/02/2025",
     url: "https://seusite.com/pagina",
     siteName: "https://github.com/niloodev",
     locale: "pt_BR",
@@ -55,6 +55,7 @@ export default function Home() {
           <Heading
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.25 }}
           >
             Lorem ipsum dolor sit amet: consectetur adipiscing elit' nullam
             convallis nunc lectus posuere et vestibulum integer pharetra.
